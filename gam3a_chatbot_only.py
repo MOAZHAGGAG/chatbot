@@ -113,7 +113,7 @@ if not st.session_state.messages:
         st.markdown("""
         ### Welcome to Helwan Commerce College Chatbot! 🎓
         
-        Hello! I am your assistant for the Faculty of Commerce and Business Administration at Helwan University. 
+        Hello! I am your assistant developed by "Moaz Haggag" for the Faculty of Commerce and Business Administration at Helwan University. 
         Ask me anything about:
         - College departments and specializations
         - Admission requirements and procedures
