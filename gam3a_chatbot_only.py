@@ -1,6 +1,7 @@
 import streamlit as st
 import time
 from dotenv import load_dotenv
+import os
 from chat_graph import count_tokens
 from openai_node import (
     check_openai_api_key,
@@ -10,6 +11,31 @@ from openai_node import (
 
 # Load environment variables
 load_dotenv()
+
+# If deployed on Streamlit (Streamlit Community Cloud) use st.secrets to provide the OpenAI key.
+# This injects the secret into the environment so helper functions that read os.environ continue to work.
+try:
+    streamlit_key = None
+    # prefer the common name OPENAI_API_KEY, but check several variants
+    try:
+        streamlit_key = st.secrets.get("OPENAI_API_KEY")
+    except Exception:
+        streamlit_key = None
+    if not streamlit_key:
+        for alt in ("OPENAI_KEY", "API_KEY", "OPENAI_API"):
+            try:
+                val = st.secrets.get(alt)
+            except Exception:
+                val = None
+            if val:
+                streamlit_key = val
+                break
+    if streamlit_key:
+        # only set if not already present to avoid overwriting local envs
+        os.environ.setdefault("OPENAI_API_KEY", streamlit_key)
+except Exception:
+    # If st.secrets isn't available (not running in Streamlit) just skip silently
+    pass
 
 @st.cache_data
 def load_college_info():

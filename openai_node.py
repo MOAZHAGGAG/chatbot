@@ -195,20 +195,20 @@ def calculate_openai_cost(model: str, input_tokens: int, output_tokens: int) -> 
     return round(total_cost, 6)  # Round to 6 decimal places for precision
 
 
-def get_available_openai_models() -> List[str]:
-    """
-    Return the cheapest OpenAI model for the workshop
+# def get_available_openai_models() -> List[str]:
+#     """
+#     Return the cheapest OpenAI model for the workshop
     
-    GPT-4o-mini: The most cost-effective choice
-    - 60%+ cheaper than GPT-3.5-turbo
-    - 128K context window
-    - Up to 16K output tokens
-    - Knowledge cutoff: October 2023
-    - Better performance than GPT-3.5-turbo
-    """
-    return [
-        "gpt-4o-mini",   # Cheapest model: $0.15/$0.60 per million tokens
-    ]
+#     GPT-4o-mini: The most cost-effective choice
+#     - 60%+ cheaper than GPT-3.5-turbo
+#     - 128K context window
+#     - Up to 16K output tokens
+#     - Knowledge cutoff: October 2023
+#     - Better performance than GPT-3.5-turbo
+#     """
+#     return [
+#         "gpt-4o-mini",   # Cheapest model: $0.15/$0.60 per million tokens
+#     ]
 
 
 def check_openai_api_key() -> bool:

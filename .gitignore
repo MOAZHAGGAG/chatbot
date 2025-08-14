@@ -56,3 +56,5 @@ htmlcov/
 
 # Databases
 *.sqlite3
+
+.streamlit/
