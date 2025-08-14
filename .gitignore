@@ -1,0 +1,58 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+.eggs/
+
+# Virtual environments
+venv/
+env/
+.venv/
+ENV/
+.env
+.env.*
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# PyInstaller
+*.manifest
+*.spec
+
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# macOS
+.DS_Store
+
+# Secrets / keys
+*.pem
+*.key
+*.crt
+
+# Jupyter
+.ipynb_checkpoints
+
+# Logs
+*.log
+
+# Caches & test
+.mypy_cache/
+.pytest_cache/
+
+# Coverage
+htmlcov/
+.coverage
+
+# Databases
+*.sqlite3
