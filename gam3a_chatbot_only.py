@@ -77,7 +77,7 @@ College Information:
 {college_info}
 
 Important Instructions:
-1. If the user's question is in Arabic, always reply in egyptian Arabic. If the user's question is in English, reply in English.
+1. If the user's question is in Arabic, always reply in egyptian Arabic. If the user's question is in English, reply in English but start the chat in arabic .
 2. Be creative, generative, and helpful in your responses. Don't just copy information; synthesize, elaborate, and provide new insights, examples, and advice.
 3. Use the information provided above as a knowledge base, but feel free to expand, explain, and add value beyond what is written.
 4. If you cannot find an answer to the college in the available information, get the answer yourself.
@@ -111,23 +111,24 @@ for message in st.session_state.messages:
 if not st.session_state.messages:
     with st.chat_message("assistant"):
         st.markdown("""
-        ### Welcome to Helwan Commerce College Chatbot! 🎓
-        
-        Hello! I am your assistant developed by "Moaz Haggag" for the Faculty of Commerce and Business Administration at Helwan University. 
-        Ask me anything about:
-        - College departments and specializations
-        - Admission requirements and procedures
-        - Tuition fees and financial information
-        - Student activities and organizations
-        - Internship and training opportunities
-        - Career guidance and job prospects
-        - Graduate studies information
-        - Campus facilities and services
-        - Academic support and counseling
-        - Student housing information
-        - Contact information
-        
-        What would you like to know?
+        ### مرحباً بك في شات بوت كلية التجارة جامعة حلوان! 🎓
+
+مرحباً! أنا مساعدك الذي تم تطويره بواسطة "معاذ حجاج" لكلية التجارة وإدارة الأعمال بجامعة حلوان.  
+اسألني عن أي شيء يتعلق بـ:  
+- أقسام وتخصصات الكلية  
+- شروط وإجراءات القبول  
+- المصروفات والرسوم الدراسية والمعلومات المالية  
+- الأنشطة الطلابية والتنظيمات  
+- فرص التدريب الصيفي والإنترن شيب  
+- الإرشاد المهني وفرص العمل  
+- معلومات عن الدراسات العليا  
+- خدمات ومرافق الحرم الجامعي  
+- الدعم الأكاديمي والإرشاد  
+- معلومات السكن الطلابي  
+- بيانات التواصل  
+
+ماذا تود أن تعرف؟  
+
         """)
 
 # Chat input
